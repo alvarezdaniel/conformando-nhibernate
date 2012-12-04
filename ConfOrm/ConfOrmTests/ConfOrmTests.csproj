@@ -1,0 +1,386 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{A4D00765-52A1-4D6F-B9AA-6FA24A0D3460}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ConfOrmTests</RootNamespace>
+    <AssemblyName>ConfOrmTests</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <UpgradeBackupLocation />
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Iesi.Collections, Version=1.0.1.0, Culture=neutral, PublicKeyToken=aa95f207798dfdb4, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Lib\Iesi.Collections.dll</HintPath>
+    </Reference>
+    <Reference Include="Moq, Version=4.0.812.4, Culture=neutral, PublicKeyToken=69f491c39445e920, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Lib\Moq.dll</HintPath>
+    </Reference>
+    <Reference Include="NHibernate, Version=3.0.0.1001, Culture=neutral, PublicKeyToken=aa95f207798dfdb4, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Lib\NHibernate.dll</HintPath>
+    </Reference>
+    <Reference Include="nunit.framework, Version=2.5.3.9345, Culture=neutral, PublicKeyToken=96d09a1eb7f44a77, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Lib\nunit.framework.dll</HintPath>
+    </Reference>
+    <Reference Include="SharpTestsEx.NUnit, Version=1.0.0.0, Culture=neutral, PublicKeyToken=8c60d8070630b1c1, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Lib\SharpTestsEx.NUnit.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.XML" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="DomainInspectorExtensionsTests.cs" />
+    <Compile Include="ForClassTest.cs" />
+    <Compile Include="GetMemberFromInterfacesTest.cs" />
+    <Compile Include="Mappers\CacheIncludeTest.cs" />
+    <Compile Include="Mappers\CacheUsageTest.cs" />
+    <Compile Include="Mappers\ElementMapperWithFormulaTest.cs" />
+    <Compile Include="Mappers\ManyToManyMapperWithFormulaTest.cs" />
+    <Compile Include="Mappers\ManyToOneMapperWithFormulaTest.cs" />
+    <Compile Include="Mappers\MapKeyManyToManyMapperColumnsFormulaTest.cs" />
+    <Compile Include="Mappers\MapKeyMapperWithFormulaTest.cs" />
+    <Compile Include="Mappers\VersionGenerationTest.cs" />
+    <Compile Include="NH\AbstractPropertyContainerMapperTest.cs" />
+    <Compile Include="NH\AccessorPropertyMapperTest.cs" />
+    <Compile Include="NH\AnyMapperTest.cs" />
+    <Compile Include="NH\BagMapperTest.cs" />
+    <Compile Include="NH\CacheMapperTest.cs" />
+    <Compile Include="NH\CascadeConverterTest.cs" />
+    <Compile Include="NH\ClassMapperTest.cs" />
+    <Compile Include="NH\CollectionElementRelationTest.cs" />
+    <Compile Include="NH\ColumnMapperTest.cs" />
+    <Compile Include="NH\MapperTests\ComponentAttributesCustomizationByPropertyPath.cs" />
+    <Compile Include="NH\ComponentElementMapperTest.cs" />
+    <Compile Include="NH\ComponentMapKeyMapperTest.cs" />
+    <Compile Include="NH\ComponentMapperTest.cs" />
+    <Compile Include="NH\ComponentNestedElementMapperTest.cs" />
+    <Compile Include="NH\Customizers\ClassCustomizerTest.cs" />
+    <Compile Include="NH\Customizers\CollectionElementCustomizerTest.cs" />
+    <Compile Include="NH\Customizers\ManyToManyCustomizerTest.cs" />
+    <Compile Include="NH\Customizers\MapKeyCustomizerTest.cs" />
+    <Compile Include="NH\Customizers\OneToManyCustomizerTest.cs" />
+    <Compile Include="NH\DefaultCandidatePersistentMembersProviderTest.cs" />
+    <Compile Include="NH\DiscriminatorMapperTest.cs" />
+    <Compile Include="NH\CustomizersHolderTest.cs" />
+    <Compile Include="NH\Customizers\CollectionKeyCustomizerTest.cs" />
+    <Compile Include="NH\Customizers\CollectionPropertiesCustomizerTest.cs" />
+    <Compile Include="NH\Customizers\ListPropertiesCustomizerTest.cs" />
+    <Compile Include="NH\ElementMapperTest.cs" />
+    <Compile Include="NH\FakeUserCollectionType.cs" />
+    <Compile Include="NH\FilterMapperTest.cs" />
+    <Compile Include="NH\IdMapperTest.cs" />
+    <Compile Include="NH\JoinedSubclassMapperTest.cs" />
+    <Compile Include="NH\KeyManyToOneMapperTest.cs" />
+    <Compile Include="NH\KeyMapperTest.cs" />
+    <Compile Include="NH\KeyPropertyMapperTest.cs" />
+    <Compile Include="NH\LazyRelationTest.cs" />
+    <Compile Include="NH\ListMapperTest.cs" />
+    <Compile Include="NH\ManyToManyMapperTest.cs" />
+    <Compile Include="NH\ManyToOneMapperTest.cs" />
+    <Compile Include="NH\MapKeyManyToManyMapperTest.cs" />
+    <Compile Include="NH\MapKeyMapperTest.cs" />
+    <Compile Include="NH\MapKeyRelationTest.cs" />
+    <Compile Include="NH\MapMapperTest.cs" />
+    <Compile Include="NH\MapperTests\AnyAppliersCallingTest.cs" />
+    <Compile Include="NH\MapperTests\AnyMappingCustomization.cs" />
+    <Compile Include="NH\MapperTests\AnyMappingSimpleTest.cs" />
+    <Compile Include="NH\MapperTests\AppliersCallingOnCompositeElementTest.cs" />
+    <Compile Include="NH\MapperTests\BagOfComponentsTest.cs" />
+    <Compile Include="NH\MapperTests\BagOfComponentsWithParentTest.cs" />
+    <Compile Include="NH\MapperTests\BagOfElementsTest.cs" />
+    <Compile Include="NH\MapperTests\BagOfManyToManyTest.cs" />
+    <Compile Include="NH\MapperTests\BagOfNestedComponentsWithParentTest.cs" />
+    <Compile Include="NH\MapperTests\BagOfOneToManyCascadeTest.cs" />
+    <Compile Include="NH\MapperTests\BagOfOneToManyInverseTest.cs" />
+    <Compile Include="NH\MapperTests\BagOfOneToManyTest.cs" />
+    <Compile Include="NH\MapperTests\BaseFuncionality.cs" />
+    <Compile Include="NH\MapperTests\BidirectionalManyToManyColumnsTest.cs" />
+    <Compile Include="NH\MapperTests\BidirectionalManyToManyInverseTest.cs" />
+    <Compile Include="NH\MapperTests\BidirectionalManyToManyTableTest.cs" />
+    <Compile Include="NH\MapperTests\BidirectionalOneToManyCascadeCircularIntegrationTest.cs" />
+    <Compile Include="NH\MapperTests\BidirectionalOneToManyCascadeIntegrationTest.cs" />
+    <Compile Include="NH\MapperTests\BidirectionalOneToOneForeignKeyAssociationTest.cs" />
+    <Compile Include="NH\MapperTests\BidirectionalOneToOnePrimaryKeyAssociationTest.cs" />
+    <Compile Include="NH\MapperTests\CascadeManyToOneTest.cs" />
+    <Compile Include="NH\MapperTests\CascadeOneToOneTest.cs" />
+    <Compile Include="NH\MapperTests\ComponentAppliersCallingTest.cs" />
+    <Compile Include="NH\MapperTests\ComponentAttributesCustomizationTest.cs" />
+    <Compile Include="NH\MapperTests\ComponentPolymorphismTest.cs" />
+    <Compile Include="NH\MapperTests\ComponentPropertyAccessorCustomizationTest.cs" />
+    <Compile Include="NH\MapperTests\ComponentPropertyAccessorTest.cs" />
+    <Compile Include="NH\MapperTests\ElementsApplierCalling.cs" />
+    <Compile Include="NH\MapperTests\ElementsCustomizersCallingTest.cs" />
+    <Compile Include="NH\MapperTests\HierarchyTablePerClassHierarchyJumpingImpOfInterfaceTest.cs" />
+    <Compile Include="NH\MapperTests\HierarchyTablePerClassHierarchyJumpingTest.cs" />
+    <Compile Include="NH\MapperTests\HierarchyTablePerClassJumpingImpOfInterfaceTest.cs" />
+    <Compile Include="NH\MapperTests\HierarchyTablePerClassJumpingTest.cs" />
+    <Compile Include="NH\MapperTests\HierarchyTablePerConcreteClassJumpingImpOfInterfaceTest.cs" />
+    <Compile Include="NH\MapperTests\HierarchyTablePerConcreteClassJumpingTest.cs" />
+    <Compile Include="NH\MapperTests\InterfaceAsRootEntityTest.cs" />
+    <Compile Include="NH\MapperTests\InterfacePropertiesPolymorphicCustomizationTest.cs" />
+    <Compile Include="NH\MapperTests\JoinedSubclassPatternsAddition.cs" />
+    <Compile Include="NH\MapperTests\ManyToManyApplierCalling.cs" />
+    <Compile Include="NH\MapperTests\ManyToManyCustomizersCallingTest.cs" />
+    <Compile Include="NH\MapperTests\ManyToManyCustomizersInvocationTest.cs" />
+    <Compile Include="NH\MapperTests\ManyToOneRelationAccessorsTest.cs" />
+    <Compile Include="NH\MapperTests\MapKeyRelationAppliersCalling\MapKeyComponentRelationAppliersCallingTest.cs" />
+    <Compile Include="NH\MapperTests\MapKeyRelationAppliersCalling\MapKeyManyToManyRelationAppliersCallingTest.cs" />
+    <Compile Include="NH\MapperTests\MapKeyRelationAppliersCalling\MapKeyRelationAppliersCallingTest.cs" />
+    <Compile Include="NH\MapperTests\MapKeyRelationCustomizersCalling\MapKeyComponentRelationCustomizersCallingTest.cs" />
+    <Compile Include="NH\MapperTests\MapKeyRelationCustomizersCalling\MapKeyManyToManyRelationCustomizersCallingTest.cs" />
+    <Compile Include="NH\MapperTests\MapKeyRelationCustomizersCalling\MapKeyRelationCustomizersCallingTest.cs" />
+    <Compile Include="NH\MapperTests\MapKeyRelationTest.cs" />
+    <Compile Include="NH\MapperTests\NaturalIdTest.cs" />
+    <Compile Include="NH\MapperTests\NestedComponentAttributesCustomizationTest.cs" />
+    <Compile Include="NH\MapperTests\OneToManyAppliersCalling.cs" />
+    <Compile Include="NH\MapperTests\OneToManyCustomizersCallingTest.cs" />
+    <Compile Include="NH\MapperTests\OneToManyCustomizersInvocationTest.cs" />
+    <Compile Include="NH\MapperTests\OneToOneRelationAccessorsTest.cs" />
+    <Compile Include="NH\MapperTests\PatternsAppliersOnCollectionCallingTest.cs" />
+    <Compile Include="NH\MapperTests\PropertyPolymorphicCustomizationTest.cs" />
+    <Compile Include="NH\MapperTests\RootClassPatternsAddition.cs" />
+    <Compile Include="NH\MapperTests\ComplexTypeForCollectionTest.cs" />
+    <Compile Include="NH\MapperTests\ComplexTypeTest.cs" />
+    <Compile Include="NH\MapperTests\ComponentDoublePropertyTest.cs" />
+    <Compile Include="NH\MapperTests\ComponentPropertyTest.cs" />
+    <Compile Include="NH\MapperTests\ComponentWithParentTest.cs" />
+    <Compile Include="NH\MapperTests\CustomCollectionPatternApplierTest.cs" />
+    <Compile Include="NH\MapperTests\CustomizerCallingOnCompositeElementTest.cs" />
+    <Compile Include="NH\MapperTests\CustomizerCallingTest.cs" />
+    <Compile Include="NH\MapperTests\CustomPropertyPatternApplierTest.cs" />
+    <Compile Include="NH\MapperTests\DefaultAssemblyAndNamespaceTest.cs" />
+    <Compile Include="NH\MapperTests\DictionaryKeyManyToMany.cs" />
+    <Compile Include="NH\MapperTests\DictionaryOfComponents.cs" />
+    <Compile Include="NH\MapperTests\DictionaryOfElements.cs" />
+    <Compile Include="NH\MapperTests\DictionaryOfManyToMany.cs" />
+    <Compile Include="NH\MapperTests\DictionaryOfOneToMany.cs" />
+    <Compile Include="NH\MapperTests\HierarchyTablePerClass.cs" />
+    <Compile Include="NH\MapperTests\HierarchyTablePerClassHierarchyTest.cs" />
+    <Compile Include="NH\MapperTests\HierarchyTablePerConcreteClassTest.cs" />
+    <Compile Include="NH\MapperTests\ImplicitPolymorphismOnRootClass.cs" />
+    <Compile Include="NH\MapperTests\JoinedSubclassAppliersCallingTest.cs" />
+    <Compile Include="NH\MapperTests\JoinedSubclassCustomizerCallingTest.cs" />
+    <Compile Include="NH\MapperTests\ListOfComponentsTest.cs" />
+    <Compile Include="NH\MapperTests\ListOfElementsTest.cs" />
+    <Compile Include="NH\MapperTests\ListOfManyToManyTest.cs" />
+    <Compile Include="NH\MapperTests\ListOfOneToManyTest.cs" />
+    <Compile Include="NH\MapperTests\ManyToManyApplyCascade.cs" />
+    <Compile Include="NH\MapperTests\ManyToOnePatternsAddition.cs" />
+    <Compile Include="NH\MapperTests\OneToManyOnDeleteConstraintTest.cs" />
+    <Compile Include="NH\MapperTests\OneToManyOnDeleteConstraintWhenCyclicTest.cs" />
+    <Compile Include="NH\MapperTests\PoidPropertyPatternsTest.cs" />
+    <Compile Include="NH\MapperTests\PrivatePropertiesTest.cs" />
+    <Compile Include="NH\MapperTests\PropertyAccessorTest.cs" />
+    <Compile Include="NH\MapperTests\RootClassAppliersCallingTest.cs" />
+    <Compile Include="NH\MapperTests\RootClassCustomizerCallingTest.cs" />
+    <Compile Include="NH\MapperTests\SubclassAppliersCallingTest.cs" />
+    <Compile Include="NH\MapperTests\SubclassCustomizerCallingTest.cs" />
+    <Compile Include="NH\MapperTests\SubclassPatternsAddition.cs" />
+    <Compile Include="NH\MapperTests\TypeDefTest.cs" />
+    <Compile Include="NH\MapperTests\UnidirectionalOneToOneTest.cs" />
+    <Compile Include="NH\MapperTests\UnionSubclassAppliersCallingTest.cs" />
+    <Compile Include="NH\MapperTests\UnionSubclassCustomizerCallingTest.cs" />
+    <Compile Include="NH\MapperTests\UnionSubclassPatternsAddition.cs" />
+    <Compile Include="NH\MapperTests\VersionAppliersCallingTest.cs" />
+    <Compile Include="NH\MapperTests\VersionInterfacePolymorphicCustomizationTest.cs" />
+    <Compile Include="NH\MapperTests\VersionPolymorphicCustomizationTest.cs" />
+    <Compile Include="NH\MapperTests\VersionPropertyTest.cs" />
+    <Compile Include="NH\NaturalIdMapperTest.cs" />
+    <Compile Include="NH\NotFoundModeTest.cs" />
+    <Compile Include="NH\OneToManyMapperTest.cs" />
+    <Compile Include="NH\OneToOneMapperTest.cs" />
+    <Compile Include="NH\PatternsAppliersHolderMergeExtensionTest.cs" />
+    <Compile Include="NH\PatternsAppliersHolderMergeHoldersTest.cs" />
+    <Compile Include="NH\PatternsAppliersHolderPropertyCallingMock.cs" />
+    <Compile Include="NH\PatternsAppliersHolderUnionWithExtensionTest.cs" />
+    <Compile Include="NH\PatternsAppliersHolderUnionWithHoldersTest.cs" />
+    <Compile Include="NH\PropertyMapperTest.cs" />
+    <Compile Include="NH\PropertyMapperWithFormulaTest.cs" />
+    <Compile Include="NH\PropertyPathExtensionsTest.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="NH\PropertyPathTest.cs" />
+    <Compile Include="NH\SchemaActionConverterTest.cs" />
+    <Compile Include="NH\SubclassMapperTest.cs" />
+    <Compile Include="NH\TypeNamesUtilsTests\ClassNameTest.cs" />
+    <Compile Include="NH\UnionSubclassMapperTest.cs" />
+    <Compile Include="NH\VersionMapperTest.cs" />
+    <Compile Include="ObjectRelationalMapperTests\AnyIntegrationTest.cs" />
+    <Compile Include="ObjectRelationalMapperTests\DoubleRelationKindManyToManyOneToManyTest.cs" />
+    <Compile Include="ObjectRelationalMapperTests\GenericBaseEntityWithPoperties.cs" />
+    <Compile Include="ObjectRelationalMapperTests\HeterogeneousAssociationTest.cs" />
+    <Compile Include="ObjectRelationalMapperTests\HierarchyClassExclusionTest.cs" />
+    <Compile Include="ObjectRelationalMapperTests\HierarchyGenericClassExclusionTest.cs" />
+    <Compile Include="ObjectRelationalMapperTests\ImplicitPolymorphismsWithGenericOneToManyTest.cs" />
+    <Compile Include="ObjectRelationalMapperTests\ImplicitPolymorphismsWithNoPersistentProperties.cs" />
+    <Compile Include="ObjectRelationalMapperTests\InterfaceImplicitPolymorphismsWithNoPersistentProperties.cs" />
+    <Compile Include="ObjectRelationalMapperTests\ManyToOneRelationInComponentTest.cs" />
+    <Compile Include="NH\MapperTests\ManyToOneRelationTest.cs" />
+    <Compile Include="NH\MapperTests\MappingPerClass.cs" />
+    <Compile Include="NH\MapperTests\OneToOneRelationTest.cs" />
+    <Compile Include="NH\MapperTests\PoidStrategyTest.cs" />
+    <Compile Include="NH\MapperTests\SetOfComponentsTest.cs" />
+    <Compile Include="NH\MapperTests\SetOfElementsTest.cs" />
+    <Compile Include="NH\MapperTests\SetOfManyToManyTest.cs" />
+    <Compile Include="NH\MapperTests\SetOfOneToManyTest.cs" />
+    <Compile Include="NH\MapperTests\SimplePerClassTest.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="NH\SetMapperTest.cs" />
+    <Compile Include="ObjectRelationalMapperTests\ArrayProperties.cs" />
+    <Compile Include="ObjectRelationalMapperTests\BagProperties.cs" />
+    <Compile Include="ObjectRelationalMapperTests\BidirectionalOneToMany.cs" />
+    <Compile Include="ObjectRelationalMapperTests\BidirectionalOneToManyCascadeTest.cs" />
+    <Compile Include="ObjectRelationalMapperTests\ComponentRegistrationTest.cs" />
+    <Compile Include="ObjectRelationalMapperTests\DictionaryProperties.cs" />
+    <Compile Include="ObjectRelationalMapperTests\ListProperties.cs" />
+    <Compile Include="ObjectRelationalMapperTests\ManyToManyRelationTest.cs" />
+    <Compile Include="ObjectRelationalMapperTests\ManyToOneRelationTest.cs" />
+    <Compile Include="ObjectRelationalMapperTests\MultipleRegistrationTest.cs" />
+    <Compile Include="ObjectRelationalMapperTests\NaturalIdTest.cs" />
+    <Compile Include="ObjectRelationalMapperTests\OneToManyInsideComponent.cs" />
+    <Compile Include="ObjectRelationalMapperTests\OneToOneRelationTest.cs" />
+    <Compile Include="ObjectRelationalMapperTests\PersistentIdTest.cs" />
+    <Compile Include="ObjectRelationalMapperTests\PoidStrategyTest.cs" />
+    <Compile Include="ObjectRelationalMapperTests\PropertyExclusionShortcutTest.cs" />
+    <Compile Include="ObjectRelationalMapperTests\ReadOnlyProperties.cs" />
+    <Compile Include="ObjectRelationalMapperTests\RegisteringDerivedTablePerClass.cs" />
+    <Compile Include="ObjectRelationalMapperTests\RegisteringTablePerClass.cs" />
+    <Compile Include="ObjectRelationalMapperTests\SetProperties.cs" />
+    <Compile Include="ObjectRelationalMapperTests\SpecificPropertyAsPoid.cs" />
+    <Compile Include="NH\MapperTests\UnidirectionalOneToOneIntegrationTest.cs" />
+    <Compile Include="ObjectRelationalMapperTests\UnidirectionalOneToOneTest.cs" />
+    <Compile Include="ObjectRelationalMapperTests\VersionInterfacePolymorphicTest.cs" />
+    <Compile Include="ObjectRelationalMapperTests\VersionTest.cs" />
+    <Compile Include="PatternExtensionsTest.cs" />
+    <Compile Include="Patterns\ArrayCollectionPatternTest.cs" />
+    <Compile Include="Patterns\AssignedPoidPatternTest.cs" />
+    <Compile Include="Patterns\BagCollectionPatternTest.cs" />
+    <Compile Include="Patterns\BidirectionalManyToManyPatternTest.cs" />
+    <Compile Include="Patterns\BidirectionalOneToManyMemberPatternTest.cs" />
+    <Compile Include="Patterns\BidirectionalOneToManyOnDeleteConstraintApplierTest.cs" />
+    <Compile Include="Patterns\BidirectionalOneToManyPatternCircularTest.cs" />
+    <Compile Include="Patterns\BidirectionalOneToManyPatternGenericCircularTest.cs" />
+    <Compile Include="Patterns\BidirectionalOneToManyPatternTest.cs" />
+    <Compile Include="Patterns\BidirectionalOneToOneAssociationPoidApplierTest.cs" />
+    <Compile Include="Patterns\BidirectionalRelationPatternTest.cs" />
+    <Compile Include="Patterns\BidirectionalUnaryAssociationPatternTest.cs" />
+    <Compile Include="Patterns\ComponentMultiUsagePatternTest.cs" />
+    <Compile Include="Patterns\ComponentPatternTest.cs" />
+    <Compile Include="Patterns\CustomUserTypeInCollectionElementApplierTest.cs" />
+    <Compile Include="Patterns\CustomUserTypeInDictionaryKeyApplierTest.cs" />
+    <Compile Include="Patterns\DictionaryCollectionPatternTest.cs" />
+    <Compile Include="Patterns\HighLowPoidPatternTest.cs" />
+    <Compile Include="Patterns\IdentityPoidPatternTest.cs" />
+    <Compile Include="Patterns\ListCollectionPatternTest.cs" />
+    <Compile Include="Patterns\NativePoidPatternTest.cs" />
+    <Compile Include="Patterns\NoSetterPropertyToFieldAccessorPatternTest.cs" />
+    <Compile Include="Patterns\OneToOneUnidirectionalToManyToOnePatternTest.cs" />
+    <Compile Include="Patterns\PoidGuidPatternTest.cs" />
+    <Compile Include="Patterns\PoIdGuidStrategyPatternTest.cs" />
+    <Compile Include="Patterns\PoidIntPatternTest.cs" />
+    <Compile Include="Patterns\PoIdPatternTest.cs" />
+    <Compile Include="Patterns\PropertyToFieldAccessorPatternTest.cs" />
+    <Compile Include="Patterns\PropertyToFieldCamelCasePatternTest.cs" />
+    <Compile Include="Patterns\PropertyToFieldMUnderscorePascalCasePatternTest.cs" />
+    <Compile Include="Patterns\PropertyToFieldUnderscoreCamelCasePatternTest.cs" />
+    <Compile Include="Patterns\PropertyToFieldUnderscorePascalCasePatternTest.cs" />
+    <Compile Include="Patterns\ReadOnlyPropertyPatternTest.cs" />
+    <Compile Include="Patterns\ReadOnlyPropertyPatternWithPolymorphismTest.cs" />
+    <Compile Include="Patterns\SequencePoidPatternTest.cs" />
+    <Compile Include="Patterns\SetCollectionPatternTest.cs" />
+    <Compile Include="Patterns\UnidirectionalOneToManyMemberPatternTest.cs" />
+    <Compile Include="Patterns\UnidirectionalOneToManyMultipleCollections\MultipleCollectionBehindMultipleComponentsTest.cs" />
+    <Compile Include="Patterns\UnidirectionalOneToManyMultipleCollections\MultipleCollectionBehindComponentTest.cs" />
+    <Compile Include="Patterns\UnidirectionalOneToManyMultipleCollections\UnidirectionalOneToManyMultipleCollectionsKeyColumnApplierTest.cs" />
+    <Compile Include="Patterns\UnidirectionalUnaryAssociationPatternTest.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RelationOnTest.cs" />
+    <Compile Include="RelationTest.cs" />
+    <Compile Include="TypeExtensionsTest.cs" />
+    <Compile Include="WorkingWithInterfaces\NoMappedInterfaceManyToManyTest.cs" />
+    <Compile Include="WorkingWithInterfaces\NoMappedInterfaceManyToOneTest.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ConfOrm\ConfOrm.csproj">
+      <Project>{AC69FE80-5DB0-4A50-AB1A-7D7860C71840}</Project>
+      <Name>ConfOrm</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
